@@ -1,0 +1,25 @@
+baseURL: "https://redesigned-doodle.github.io/handbook/"
+languageCode: ja-jp
+title: Handbook
+theme: [PaperMod]
+
+menu:
+  main:
+    - name: Company
+      url: company
+      weight: 5
+
+params:
+  homeInfoParams:
+    Title: "Handbook"
+    Content: >
+      私たちは開発チーム向けに便利な製品をつくろうとしています。
+      製品のビジョンや戦略、内容は公開しています。お好きに見ていってください！
+
+  socialIcons:
+    - name: github
+      title: GitHubでソースをみる
+      url: https://github.com/redesigned-doodle/handbook
+    - name: X
+      title: 何でも連絡どうぞ！
+      url: https://x.com/sakanately
