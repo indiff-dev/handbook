@@ -1,8 +1,8 @@
 +++
 date = '2025-03-25T09:40:07+09:00'
-draft = false
 title = 'Mission'
-menus = ['main', 'company']
+author = ['Kento Maruyama']
+weight = 1
 +++
 
 Missionは、事業やプロダクトの根本的な「存在意義」を示します。現在形で表現されることが多く、顧客・社会・社員に対して、今何を提供しようとしているのか、意思決定や価値観の拠り所になるものです。
