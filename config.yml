@@ -2,6 +2,7 @@ baseURL: "https://handbook.redesigned-doodle.org"
 languageCode: ja-jp
 title: Handbook
 theme: [PaperMod]
+pagination.paperSize: 5
 
 menu:
   main:
