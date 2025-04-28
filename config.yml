@@ -11,6 +11,8 @@ menu:
       weight: 5
 
 params:
+  ShowToc: true
+
   homeInfoParams:
     Title: "Handbook"
     Content: >
@@ -19,8 +21,11 @@ params:
 
   socialIcons:
     - name: github
-      title: GitHubでソースをみる
+      title: GitHub
       url: https://github.com/redesigned-doodle/handbook
+    - name: bluesky
+      title: bluesky
+      url: https://bsky.app/profile/sakanate.bsky.social
     - name: X
-      title: 何でも連絡どうぞ！
+      title: X
       url: https://x.com/sakanately
