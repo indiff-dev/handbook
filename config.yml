@@ -6,11 +6,14 @@ pagination.paperSize: 5
 
 menu:
   main:
-    - name: Company
-      url: company
+    - name: Archive
+      url: archives
       weight: 5
 
 params:
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
   ShowToc: true
 
   homeInfoParams:
