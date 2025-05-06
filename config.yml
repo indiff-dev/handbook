@@ -17,6 +17,7 @@ languages:
           url: archives
           weight: 5
   ja:
+    contentDir: content/ja
     languageName: "Japanese"
     weight: 2
     params:
