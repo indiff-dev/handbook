@@ -1,14 +1,30 @@
 baseURL: "https://handbook.redesigned-doodle.org"
 languageCode: ja-jp
+defaultContentLanguage: en
+
 title: Handbook
 theme: [PaperMod]
+enableEmoji: true
 pagination.paperSize: 5
 
-menu:
-  main:
-    - name: Archive
-      url: archives
-      weight: 5
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    menu:
+      main:
+        - name: Archive
+          url: archives
+          weight: 5
+  ja:
+    languageName: "Japanese"
+    weight: 2
+    params:
+      homeInfoParams:
+        Title: "Handbook"
+        Content: >
+          私たちは開発チーム向けに便利な製品をつくろうとしています。
+          製品のビジョンや戦略、内容は公開しています。お好きに見ていってください！
 
 params:
   ShowReadingTime: true
@@ -19,8 +35,8 @@ params:
   homeInfoParams:
     Title: "Handbook"
     Content: >
-      私たちは開発チーム向けに便利な製品をつくろうとしています。
-      製品のビジョンや戦略、内容は公開しています。お好きに見ていってください！
+      We’re building a useful product for development teams.
+      Our vision, strategy, and product details are all publicly available — feel free to take a look!
 
   socialIcons:
     - name: github
