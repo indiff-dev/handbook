@@ -5,58 +5,54 @@ author = ['Kento Maruyama']
 weight = 3
 +++
 
-人間は、不完全で怠惰な生き物です。
+Humans are inherently imperfect and prone to laziness.
 
-一度決めたことに対し、徹底的に一貫した行動を取り続けるのはとてつもなく大変なことです。
+It is incredibly challenging to maintain unwavering commitment to a decision over the long term.
 
-この組織での活動は **「レンガを積み上げること」** に似ています。丁寧な仕事でレンガを積み続ければ、遥か空高くレンガの塔を築くことができます。しかし、もしレンガを雑に積んでしまうと、崩壊するか、これ以上積めない状況に陥るでしょう。
+Our work in this organization is much like **"laying bricks."** If you lay each brick carefully and deliberately, you can build a towering structure that reaches the sky. But if you lay them carelessly, the tower will either collapse or reach a point where it can no longer be built higher.
 
-**このページは、この組織で重視している仕事に対する姿勢や思想、哲学を記し、組織文化を定義します。この組織では、ここで定義された文化を徹底的に遵守します。**
+**This page defines the attitudes, principles, and philosophies that shape our organizational culture. These values must be upheld without compromise, forming the foundation of everything we do.**
 
-もし、文化を守れていない方を見つけたとき、この組織に所属する全ての方は、たとえ相手が組織の重鎮であろうとも、次のメッセージを送ることができます。
+If you ever encounter someone acting against this culture, anyone in this organization – regardless of rank or position – is encouraged to deliver the following message:
 
-> **それは文化に反している。受け入れられない。**
+> **"That goes against our culture. It is unacceptable."**
 
-この組織では、「それは文化に反している」のメッセージを送ることを大変奨励します。**組織文化の維持に努めた方、組織文化の衰退を止めた方を褒め称えていきます。**
-
----
-
-## "変えないこと"と"変えてよいこと"
-
-文化を言語化する手段として、この組織における **"変えないこと"と"変えてよいこと"** を定義していきます。
-
-**あなたの創造力と自主性をもって、存分に"変えてもよいこと"。組織が絶対に譲らない、あなたに守ってもらいたい"変えないこと"。** これら2つを明確に定義します。
+We strongly encourage this kind of direct feedback. **We will celebrate those who preserve our culture and those who act to stop its erosion.**
 
 ---
 
-## 変えないこと
+## "What Must Never Change" vs. "What Can Be Changed"
 
-### 1. 顧客への価値提供と体験の質に影響があるものは、徹底的に検討し、丁寧な仕事と戦略に基づいて行動する。誰もが納得でき、間違いなく良いと断言できなければ、受け入れられない。
+To clearly define our culture, we will distinguish between **"What Must Never Change"** and **"What Can Be Changed"** within this organization.
 
-全ての仕事に徹底や完璧さを求めるわけではありません。
+We invite you to exercise your creativity and autonomy in areas that can be changed, while we ask for your unwavering commitment to those things that must never be compromised.
 
-顧客への価値提供と体験の質に影響があるものに限り、頭をフル回転させ、丁寧な仕事をしようということです。そして、この領域に関する意思決定や行動は、誰の目から見ても、間違いなく良いと断言できるものでなければなりません。
+---
 
-> {{< collapse summary="具体例" >}}
+## What Must Never Change
 
-### 組織文化づくりの協力依頼
+### 1. When it comes to decisions that impact the value provided to our customers or the quality of their experience, we must act with thorough consideration, careful execution, and a clear strategy. If it isn't something that everyone can confidently say is "undeniably good," it is unacceptable.
 
-> Aさん: Bさんにぜひ組織文化の土台をつくってほしい。協力してもらえないだろうか？
+We are not asking for perfection in every task.
 
-> Bさん: いいですよ。GitLabの文化が非常に良いから、それを真似すれば良いと思います。
-> 以前やったことやGitLabのHandbookで書かれていることを、そのままコピペすることになりそうだけど、それでいい？
+However, when it comes to matters that directly impact customer value and experience, we expect nothing less than the highest standards of thought and craftsmanship. Decisions in this domain must be beyond doubt, reflecting a commitment to excellence that anyone in the organization can stand behind with confidence.
 
-> Aさん: それは文化に反している。受け入れられない。
-> 我々には我々の適したやり方があるはず。他人のプラクティスをそのまま流用して、最高の組織が作れると思えない。
-> 組織文化の土台を築く仕事は、組織において最も重要な仕事の1つである。それをコピペで済ませようとしている姿勢が受け入れられない。
-> 
-> あなたのそのやり方で、本当に間違いなく最高の組織をつくれると断言できるのか？
-> 例えば、私が考えているのは、このCultureページのようなものだ。Bさんはどう思う？
+> {{< collapse summary="Examples" >}}
+
+### Request for Help in Building Organizational Culture
+
+> Alice: I'd like to ask you, Bob, to help lay the foundation of our organizational culture. Could you assist with this?
+
+> Bob: Sure, I think we should just replicate what GitLab has done. Their culture is great, and we could just copy-paste what they've written in their Handbook.
+
+> Alice: That goes against our culture. It is unacceptable.
+> We need to find our own way – a way that truly fits our organization. I don’t believe we can build the best possible culture by simply copying someone else’s practices.
+>
+> Can you honestly say that this approach will lead to building an undeniably great organization?
+> For example, I’m thinking of something like this Culture page. What do you think, Bob?
 
 {{</ collapse >}}
 
----
+## What Can Be Changed
 
-## 変えてよいこと
-
-記載予定
+To be added soon.

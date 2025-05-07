@@ -5,14 +5,14 @@ author = ['Kento Maruyama']
 weight = 2
 +++
 
-Visionとは、ミッションを突き詰めた先にある実現したい世界や社会の姿のことです。未来形・理想形で表現され、社員や顧客が共感し、「この未来を一緒に目指したい」と思えるものであり、中長期の事業成長や戦略の軸になるものです。
+A Vision represents the future state or ideal world that lies beyond the Mission. It is typically expressed in a forward-looking or aspirational tone, inspiring both team members and customers to share in the journey toward this desired future. It serves as the foundation for long-term business growth and strategic direction.
 
 ---
 
 ## Our Vision
 
-将来、どんな世界を実現したいのか？
+What kind of world do we want to create in the future?
 
-> 私たちが実現したいビジョンは **「価値あるプロダクトが社会にあふれ、便利でクールなソフトウェアで満たされている世界」** です。
+> Our vision is **"a world where valuable products fill society, enriched by convenient and cool software."**
 
 ---

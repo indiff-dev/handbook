@@ -5,27 +5,25 @@ author = ['Kento Maruyama']
 weight = 11
 +++
 
-This page defines the solutions we aim to implement for the problems we have identified. It covers the root causes of the problems, the desired outcomes for our product, the proposed solutions, and what we should focus on in the MVP phase. Problem-Solution Fit is the phase where we analyze the causes of the problem and define potential solutions.
+このページでは、我々が取り組む課題の解決策を定義します。課題の原因とはなにか、プロダクトにはどんな成果が必要か、課題に対する解決策とは何か、MVPで何から取り組むか。Problem-Solution Fitとは、課題の原因を分析し、解決策を定義するフェーズです。
 
-Key Steps in Problem-Solution Fit
-
-1. Problem Clarification
-2. Problem Structure and Root Cause Analysis
-3. Defining Desired Outcomes
-4. Defining Solution Criteria
-5. Solution Proposals
-6. MVP Design
-7. Problem and Solution Validation
+1. 課題の明確化
+2. 課題の構造分析 / 原因分析
+3. 成果の定義
+4. 解決策の条件定義
+5. 解決策案
+6. MVP設計
+7. 課題と解決策の検証
 
 ---
 
-## Problem Clarification
+## 課題の明確化
 
-Based on our findings from the Problem Discovery phase, we have defined the primary problem as follows:
+Problem Discoveryより、解決すべき課題は次と定義している。
 
-> **Many development teams struggle to reflect user needs and feedback in their products, preventing them from building products that people are willing to pay for – and keep paying for – over time.**
->
-> **Connections and relationships between development teams and users are weak, leading to low engagement. There is a lack of meaningful dialogue and analysis with users.**
+> **開発チームの多くが、ユーザーのニーズや声をプロダクトに反映できておらず、お金が払われる、払われ続けるプロダクトに成長することができず、困っている。**
+> 
+> **開発チームとユーザーの繋がりや関係性が薄く、エンゲージメントが低い。ユーザーとの対話と分析が不足している。**
 
 ---
 

@@ -5,16 +5,16 @@ author = ['Kento Maruyama']
 weight = 1
 +++
 
-Missionは、事業やプロダクトの根本的な「存在意義」を示します。現在形で表現されることが多く、顧客・社会・社員に対して、今何を提供しようとしているのか、意思決定や価値観の拠り所になるものです。
+The Mission defines the fundamental "reason for existence" of a business or product. It is often expressed in the present tense, serving as a guiding principle for decision-making and a foundation for the values that drive what the company aims to deliver to its customers, society, and team members today.
 
 ---
 
 ## Our Mission
 
-今、私たちは何のために存在するのか？
+Why do we exist today?
 
-> 私たちのミッションは **「開発者とユーザがひとつのチームとなる、共創型のCommunity-drivenな開発アプローチを普及させること」** です。
+> Our mission is to **"promote a community-driven, co-creative development approach where developers and users become one unified team."**
 
-開発チームが製品を提供し、ユーザが製品を受容するという関係を、開発チームとユーザが一体となって製品を共創する関係に変化させます。多くの開発チームを、ユーザとのズレが起きにくいチームに変化させ、ユーザが本当に便利でクールと感じる、そんな製品を生み出すことを支援します。
+We aim to transform the conventional relationship where development teams simply deliver products and users merely consume them, into one where both sides co-create meaningful products together. Our goal is to support many development teams in closing the gap with their users, empowering them to create products that users genuinely find useful, innovative, and delightful.
 
 ---
