@@ -5,336 +5,345 @@ author = ['Kento Maruyama']
 weight = 10
 +++
 
-このページでは、我々が取り組む課題の領域を定義します。最終的につくられるプロダクトがどんな課題を解決するのか、その課題は本当に市場に明確に存在し、痛みを伴うものなのか。Problem Discoveryとは、課題を発見し、検証するフェーズです。
+This page defines the problem domain that we aim to address. It outlines the challenges that our final product is designed to solve and verifies whether these problems truly exist in the market and cause significant pain to the target audience. Problem Discovery is the phase where we identify and validate these problems.
 
-1. 課題の発見と仮説の立案
-2. ペルソナの定義
-3. 課題仮説の検証
+Key Steps in Problem Discovery
+
+1. Problem Identification and Hypothesis Formation
+2. Persona Definition
+3. Problem Hypothesis Validation
 
 ---
 
-## 課題の仮説
+## Problem Hypothesis
 
-ソフトウェアサービスを提供する開発チームの多くが、次の課題を抱えていると仮説を立てた。
+We have formulated the following hypothesis based on our observations of many software development teams:
 
-> **開発チームの多くが、ユーザーのニーズや声をプロダクトに反映できておらず、お金が払われる、払われ続けるプロダクトに成長することができず、困っている。**
+> **Many development teams struggle to reflect user needs and feedback in their products, preventing them from building products that people are willing to pay for – and keep paying for – over time.**
 > 
-> **開発チームとユーザーの繋がりや関係性、エンゲージメントが薄く、対話と分析が不足している。**
+> **There is often a weak connection, low engagement, and insufficient communication between development teams and their users.**
 
-この課題は、開発チームに次の問題を引き起こしている。
+This lack of connection leads to several critical issues for development teams:
 
-- どの機能を実装するべきかを判断することができない
-- 実装した機能がどのように使われているかを知ることができず、機能の改善案を考えることができない
-- ユーザーが喜んで課金し、価格よりも価値を感じるプロダクトになれず、PMFを達成できない
+- Inability to decide which features to prioritize and build
+- Lack of insight into how implemented features are actually being used, making it difficult to plan meaningful improvements
+- Failure to reach Product-Market Fit (PMF), as their products fail to deliver enough value for users to pay for them and perceive them as worth the price
 
-この課題を、以降の取り組みでの最上位の課題としていく。この課題の範囲を超えたものは、解決策やプロダクトに含まれることはない。
-課題の仮説はここでは深堀りせず、Problem-Solution Fitのフェーズで深堀りしていく。
+We have established this as the primary problem to address moving forward. Solutions and products that fall outside this problem scope will not be included in our efforts. We will dive deeper into this hypothesis during the Problem-Solution Fit phase.
 
-> {{< collapse summary="課題発見の過程" >}}
+> {{< collapse summary="Problem Discovery Process" >}}
 
-### 1. 大まかな市場性・課題の調査
+### 1. Initial Market and Problem Exploration
 
-はじめに、知人・友人の開発者に対し、どんな課題を抱えているかについて、市場性と課題のインタビューを行った。次の質問を行い、どんなことに普段困っているかを聞いた。
+We began by interviewing a few developer friends to understand the market and uncover potential problems. We asked the following questions to gain insight into their pain points:
 
-- 開発チームの仕事に満足しているか？
-- 開発チームでの仕事で、直近で強くストレスに感じた出来事を教えてくれますか？
+- Are you satisfied with your work as part of a development team?
+- Can you share a recent situation at work that you found particularly stressful?
 
-**3名に確認し、どの方も仕事自体に満足していると回答した。** ストレスに感じた出来事についても回答を得たが、一貫性や共通点はなかった。この聞き方では、回答が発散してしまい、課題の分析につなげるのは難しいと感じた。
-
----
-
-### 2. 自身の経験から課題の手がかりを考える
-
-自分自身に対しても上記の質問を問いかけ、自己分析をしてみた。結果は次のとおり。
-
-- チームでの仕事に満足していない
-- **自分が真剣に取り組み、時間と労力をかけて生み出した製品が全く使われない**ことにストレスを感じた（このとき、私は製品に対する大きな方針を決定できる立場ではなかった。エンジニアとして、自分ができる最大限のことをやっていたということ。）
-
-原因を分析し、次の事項によって「時間と労力をかけて生み出した製品が全く使われない」状態になったと考えた。
-
-- **構想初期や開発途中で、ユーザーに市場性の確認を徹底していない**
+**We spoke with three individuals, all of whom reported being generally satisfied with their work.** While they did share some stressful experiences, their responses lacked consistency and common themes, making it challenging to draw meaningful conclusions. We realized that this approach would not effectively reveal the core problems we were seeking.
 
 ---
 
-### 3. 市場性・課題の再調査
+### 2. Reflecting on Personal Experience
 
-特に日本において、ユーザーと会話する文化はあまり馴染みがない。**ほとんどの開発チームは、ユーザーと深く会話していないのではないか？と、ここで考え始めた。** これを検証するため、市場性と課題のインタビューの設問内容を次に変更し、再度確認を行った。
+Next, we turned the same questions inward, conducting a self-assessment to identify our own frustrations.
+The results were as follows:
 
-- 最近、開発チームで「手間がかかる」「面倒だな」と感じた作業やプロセスはありますか？
-- **「本当にユーザーが求めているものを作れているか」という点について、あなたの感覚に近いものを選んでください。**
-- **プロダクトの方向性や意思決定について、チームで感じていることがあれば教えてください。**
+- Dissatisfaction with work as part of a team
+- Significant stress from **seeing a product I had invested considerable time and effort into go completely unused** (at that time, I was not in a position to influence major product decisions, and I was doing the best I could as an engineer)
 
-2名に確認し、次の情報を得ることができた。
+Upon further analysis, we identified the following potential reasons for this frustration:
 
-- スタートアップに所属する方は、ユーザーが求めるものを作れていることに自信を感じていると答えた。大企業に所属する方は、合っていると思うが確証はないと答えた。
-- スタートアップに所属する方であっても、機能が実際にどう使われているのかまでは把握しきれていない
-- **2人とも「作る機能が明確に決まっており、迷うことがあまりない」と答えなかった**
-
-この結果と自身の過去の経験から、開発チームとユーザーの間に何らかの課題があると考え、この課題を分析することにした。
+- **Lack of thorough user validation and market testing in the early stages of product development**
 
 ---
 
-### 4. ターゲットユーザーに到達することが難しい
+### 3. Reassessing Market Fit and Problem Scope
 
-課題分析をするため、先の2名以外の他の開発者からインタビューを伺うことにした。特に、友人・知人にいないスタートアップ・ベンチャー企業に所属する開発者にコンタクトをとろう考えた。
+In Japan, deep conversations with users are often not part of the standard development culture. This led us to question **whether most development teams are even engaging with their users in a meaningful way.**
+To test this, we adjusted our interview approach as follows and conducted another round of conversations:
 
-しかし、次の施策を試したが、ターゲットの開発者とつながることが全くできなかった。
+- Have you recently experienced any tasks or processes in your development work that felt cumbersome or unnecessarily complicated?
+- **How confident are you that you are building what your users truly want?**
+- **Do you have any thoughts about the direction of your product or decision-making within your team?**
 
-1. XやLinkedinのソーシャルアカウントに対し、DMでFormの回答依頼を行う
-    - **ほとんどの人がDM機能を無効にしている**
-2. 直近に資金調達を行ったスタートアップ企業に、コーポレートサイトの問い合わせ経由でFormの回答依頼を行う
-    - 問い合わせページの本来の使い方ではない。倫理的にアウトか、**目的外利用禁止の文言がある。**
-3. スタートアップが好きそうなテックイベントに参加し、懇親会で知り合いになり、インタビューを行う
-    - **自然な参加をすると、普通は連絡先交換まで至らない。** 2-3回の参加が必要になる場合もある。コアユーザーになる確度が低く、**時間のコストと見合っていない**。
+From interviews with two additional individuals, we gathered the following insights:
 
-ここで、次の情報を得ることができた。
+- Those working at startups expressed confidence in building what their users wanted, while those at larger companies felt uncertain.
+- Even those at startups admitted to not fully understanding how their features were being used.
+- Neither respondent said they always had a clear understanding of which features to build next.
 
-- **ユーザーとつながることに時間と労力がかかりすぎる**
+From this and our own past experiences, we began to suspect that a deeper, more systemic disconnect exists between development teams and their users. This hypothesis became the foundation for our further problem analysis.
 
 ---
 
-### 5. 開発チームとユーザーのつながりが薄い
+### 4. Difficulty Reaching Target Users in Japan
 
-ターゲットユーザーに到達する他の施策として、次があると考えた。
+To deepen our understanding of this problem, we attempted to gather insights from additional developers beyond the two we had already interviewed.
+Specifically, we aimed to connect with developers at startups and venture companies, who were not within our immediate network of friends or acquaintances. However, our attempts to reach these target users faced significant challenges:
 
-- QiitaとZennに投稿を行い、開発チームとユーザーの間に課題を感じる人とつながる。投稿の内容に、Slackコミュニティへの案内を記載し、密につながる環境をつくる。
-- ターゲットユーザーが集まりそうなイベントを主催する。集まったユーザーにコンタクトをとり、コミュニティメンバーに誘い込む。
+1. Direct Messaging on X (formerly Twitter) and LinkedIn
+    - **Most people had disabled their DM functionality,** making outreach nearly impossible.
+2. Contacting Recently Funded Startups via Corporate Websites
+    - Many contact forms on corporate websites **explicitly prohibit use for purposes like survey requests,** making this approach ethically questionable or outright against their terms.
+3. Networking at Tech Events
+    - While we tried attending tech events and networking sessions to naturally meet potential users, it proved inefficient. Establishing meaningful connections often required attending multiple events, and the probability of encountering high-value users was low.
+    - **The time investment and cost were disproportionate to the potential benefit.**
 
-Slackコミュニティづくりを試していると、次に気づくことができた。
+From these attempts, we learned the following:
 
-- 呼び込むまでは可能かもしれないが、**持続的に密で熱意のあるつながりを維持するには、多くの工夫が必要**
-    - 協力してくれる人に「自分事感」を与え、ともに製品をつくるように感じさせる運用が必要
-    - 協力してくれる人にインセンティブを与える仕組みが必要
-    - Slackを普段使わない人であれば、LINEで別途通知するなどの工夫が必要
-    - みんなが活発に意見を出せるように、場を回すような運用が必要
-    - 参加者が増えても、誰でも気軽に発言できるように、心理的安全性の確保が必要
+- **Connecting with target users can be extremely time-consuming and labor-intensive.**
 
-ユーザーとつながることに時間と労力がかかるが、**つながったあとも大変な労力がかかる**ことを理解し始めた。開発チームがユーザーに便利でクールな製品を生み出すには、ユーザーの声が必須である。しかし、ユーザーとつながることも、その後のつながりを維持することも**実際はとても大変**である。
+---
 
-また、開発チームが持続的に、ユーザーに便利でクールな製品を届けるためには、次の開発アプローチが必要ではないかと気づいた。
+### 5. Weak Connections Between Development Teams and Users
 
-- **開発チームとユーザーがひとつのチームとなる、Community-drivenな共創型のプロダクト開発**
+To overcome this, we considered alternative approaches to reaching our target users:
 
-オープンソースプロジェクトのように、ユーザーがissueを起票したり、活発に意見したり、と**開発チームとユーザーが密にコラボレーションすることが、便利でクールな製品を生み出す解決策になる**のではないかと気づいた。これを課題の仮説に立て、検証していくことを決めた。
+- Posting on platforms like Medium to share our findings and attract developers who sense similar challenges. We included links to our Slack community to encourage more direct and frequent interactions.
+- Hosting our own events where developers could gather, fostering a more engaged community that we could directly connect with.
+
+However, as we experimented with building a Slack community, we discovered several additional challenges:
+
+- It might be possible to attract users, but sustaining close, passionate engagement over time **requires significant effort:**
+    - Users need to feel a deep sense of ownership and participation, as if they are co-creating the product.
+    - An incentive structure must be in place to motivate ongoing collaboration.
+    - For those not accustomed to using Slack, additional communication methods like LINE or email might be needed to keep them engaged.
+    - Effective community management is essential to create a psychologically safe space where everyone feels comfortable sharing ideas, regardless of group size.
+
+From this, we realized that even after successfully connecting with users, maintaining meaningful relationships requires ongoing effort and thoughtful management. To truly enable development teams to create convenient and cool products, we need more than just user voices – we need deep, continuous collaboration.
+
+This led us to the realization that the following development approach might be essential:
+
+- **A community-driven, co-creative approach where development teams and users function as a single, unified team.**
+
+We began to think that this approach, similar to open-source projects where users actively open issues and contribute feedback, could be the key to building truly impactful products. This became our new working hypothesis, which we decided to validate further in the next phase.
 
 {{</ collapse >}}
 
 ---
 
-## ペルソナの定義
+## Persona Definition
 
-我々は、初期のターゲットユーザーとして次のペルソナに決定した。
+We have identified the following persona as our initial target user:
 
-> **WebベースのSaaSを提供し、MVP開発中〜PMF達成のフェーズにいるスタートアップ企業の開発チームに所属する、チームの決裁権を持つCEOやCTO、Tech-Lead Manager、Tech-Lead、Managerの人物でかつ、開発チームとユーザーの繋がりや関係性、エンゲージメントに課題を感じている方をターゲットにする。**
+> Our target persona is a decision-maker (CEO, CTO, Tech-Lead Manager, Tech-Lead, or Manager) within a development team at a startup company providing web-based SaaS. These companies are typically in the phase between MVP development and achieving Product-Market Fit (PMF), and they feel significant challenges in maintaining connections, relationships, and engagement between the development team and users.
 
-> {{< collapse summary="ペルソナの詳細" >}}
+> {{< collapse summary="Detailed Persona" >}}
 
-### 企業種別
+### Company Type
 
-**WebベースのSaaSを提供している企業。企業のうち、どちらかというとスタートアップ・ベンチャー企業を優先するが、大企業も含めていく。**
+**Companies that provide web-based SaaS. While we primarily target startups and venture companies, we also include larger enterprises.**
 
-自分たちが今持つ知識を活用できるよう、WebベースのSaaSを提供する企業とした。
-導入や意思決定にスピード感のある、スタートアップやベンチャー企業に所属する開発チームを基本的なターゲットにしている。
+We chose web-based SaaS companies because we can leverage our existing knowledge in this domain.
+Startups and venture companies are our primary focus because they tend to have a faster decision-making process when it comes to adoption.
 
-### 業種
+### Industry
 
-**toCを優先し、toBは優先度しない。**
+**Prioritizing B2C over B2B.**
+We focus on B2C because building relationships with users is inherently more challenging and perceived as a bigger problem compared to B2B.
 
-toCのほうがユーザーとの関係を構築することが難しく、課題に感じやすいためこのようにした。
+### Development Team Phase
 
-### 開発チームのフェーズ
+**Targeting development teams that are in the phase from MVP development to achieving PMF.**
+These teams have the highest need for stronger connections, relationships, and engagement with their users.
 
-**MVP開発中〜PMF達成のフェーズにいる開発チームをターゲットにする。**
+### Key Individuals to Approach
 
-このフェーズの開発チームが、ユーザーとの繋がりや関係性、エンゲージメントを最も必要とするからである。
+**Focusing on individuals who play a critical role in decision-making and product adoption within the team.**
 
-### 特にアプローチする人物像
+- CEO or CTO
+- Tech-Lead Manager, Tech-Lead, or Manager within the development team
 
-**チームへの製品導入を決定できる、重要な役割を担う次の人物をターゲットとする。**
+### Level of Problem Awareness
 
-- CEOやCTO
-- 開発チームのTech-Lead Manager, Tech-Lead, Manager
-
-### 課題に対する温度感
-
-ユーザーとの繋がりや関係性、エンゲージメントについて、**中〜大の課題感を感じている方をターゲットにする。**
+We specifically target those who **feel a medium to high level of pain** related to weak connections, relationships, and engagement with their users.
 
 {{</ collapse >}}
 
 ---
 
-## 課題仮説の検証
+## Problem Hypothesis Validation
 
-課題仮説が、市場で **"明確に存在し"**、かつ **"痛みを伴っている"** 課題であると確信できるかを調査する。次の3点が明らかになっていることが、そのサインである。
+To validate whether a problem hypothesis is a "clearly existing" and "painful" problem in the market, we look for the following three indicators:
 
-- **"具体的なエピソード"** と **"感情の痛み"** を複数のユーザーから引き出せている
-- その課題に対して **"既に行動している"** か、あるいは **"行動したがうまくいっていない"** 証拠がある
-- 課題が **"意思決定や行動"** に影響していることがわかる
+- We can extract multiple "specific episodes" and "emotional pain" from different users.
+- There is evidence that users are either "already taking action" to address the problem or have "attempted to solve it unsuccessfully."
+- The problem is clearly influencing "decision-making and actions."
 
-次のチェックリストで7点以上と判断できるなら、Problem-Solution Fitへ進む。
+If the hypothesis scores 7 or more points on the following checklist, it is ready to move to the Problem-Solution Fit phase.
 
-検証項目 | 基準 | スコア
+Validation Criteria | Standard | Score
 | --- | --- | ---
-感情的痛み | 明確なエピソード＋言語化された感情あり | 3
-行動実績 | 明確な打ち手を既に実行 or 試行した証拠あり | 3
-意思決定への影響 | 経営/プロダクト/実装方針に1つ以上影響 | 3
-合計点 | 9点満点中7点以上なら真の課題 | –
+Emotional Pain | Clear episodes + well-expressed emotions | 3
+Evidence of Action | Clear evidence of attempts to address the problem | 3
+Impact on Decision-Making | Influences at least one management, product, or implementation decision | 3
+Total Score | 7 or more out of 9 points indicates a genuine problem | –
 
-> {{< collapse summary="3観点の補足" >}}
+> {{< collapse summary="Further Details on the 3 Key Indicators" >}}
 
-### 1. "具体的なエピソード"と"感情の痛み"を複数のユーザーから引き出せている
+### 1. Extracting "Specific Episodes" and "Emotional Pain" from Multiple Users
 
-- ただ「困ってる」と言うのではなく、実際に“失敗した” or “損失を出した”エピソードが語られているか？
-- それが個別の現象ではなく複数人に共通しているか？
-- そのときの**感情（イライラ、もやもや、悲しみ、恐怖など）**を覚えていたか？
+- Are users sharing concrete stories of "failures" or "losses" rather than just vague complaints about being "frustrated"?
+- Are these experiences not isolated incidents but shared by multiple people?
+- Do they clearly remember the emotions (e.g., frustration, confusion, sadness, fear) they felt at the time?
 
-例：「ユーザーの声を聞かずに機能を出したら、リテンションが一気に落ちた。営業からも怒られて、チームの士気が下がった。」
+Example:
 
----
+*"We released a feature without consulting our users, and retention rates plummeted. The sales team got angry, and it killed the team's morale."*
 
-### 2. その課題に対して"既に行動している"か、あるいは"行動したがうまくいっていない"証拠がある
+### 2. Evidence that Users are "Already Taking Action" or "Have Tried and Failed" to Solve the Problem
 
-- ユーザーが自分なりに工夫や回避策をとっているか？（Slackでユーザーグループを作っている、Notionでログをとっている、など）
-- その解決手段に満足していない、あるいは「うまくいっていない」ことを認めているか？
+- Are users already trying to address the problem through their own creative workarounds? (e.g., creating user groups in Slack, logging feedback in Notion)
+- Do they admit that these solutions are either "not satisfying" or "not working well"?
 
-例：「Notionでユーザーの声を記録してたけど、全然見返さなくて形骸化してるんです…」
+Example:
 
----
+*"We've been logging user feedback in Notion, but we never actually go back to review it, so it's just become a pointless ritual..."*
 
-### 3. 課題が"意思決定や行動"に影響していることがわかる
+### 3. Evidence that the Problem is "Impacting Decision-Making or Actions"
 
-- その課題がチームの方向性のブレや開発ミス、優先度判断ミスなどに繋がっているか？
-- 「この問題があるから、○○ができない」と言っているか？
+- Is this problem causing misalignment in the team’s direction, development mistakes, or poor prioritization decisions?
+- Are they explicitly saying, "We can't do X because of this problem"?
 
-例：「ユーザーの本音がわからなくて、どの機能を次に作るか決められず、結局上司の一声で決めるようになっている」
+Example:
 
-{{</ collapse >}}
-
----
-
-## 課題検証のプロセス
-
-次のステップで多くのユーザーと会話し、課題を検証することにした。
-
-1. ペルソナに該当する、課題に共感するユーザーとの接点を獲得する
-2. ユーザーと対話を行い、3観点の確認を行う
-
-30名との対話を目標とした。接点獲得には、課題のストーリーに対する共感から接点を得る投稿型のアプローチを採用している。
-
-> {{< collapse summary="戦略の詳細" >}}
-
-### 1. ペルソナに該当する、課題に共感するユーザーとの接点を獲得する
-
-Zenn, noteのプラットフォームで、課題に対して激しく共感できるストーリーを投稿する。投稿に書かれた連絡先やコメントから、ペルソナに該当するユーザーとの接点を獲得する。[SuperhumanのRahul Vohraさんの投稿](https://medium.com/swlh/rip-mailbox-or-founders-how-to-stop-worrying-and-love-being-acquired-261da4f6d566)などを参考にする。
-
----
-
-### 2. ユーザーと対話を行い、3観点の確認を行う
-
-はじめに、ペルソナに該当するユーザーであるかどうかを確かめる。
-
-> - 現在開発されているプロダクトについて教えてください
-> - 現在の開発フェーズは何でしょうか？正式リリースされていますか？
-> - 企業種別と開発チームでの役割を教えていただけますか？
-
-ペルソナに該当する方と分かれば、インタビューのアポイントメントを取る。その際、インタビューの背景と目的、主な聞きたいことを伝える。
-
-> 私は今、プロダクトをつくる多くの開発チームが **「ユーザーとの繋がりの薄さ」に、課題を感じている**と予想しています。
-> 「開発チームとユーザーの距離感が遠い」ことで、開発チームに次のような問題を起こしていると考えました。
-> 
-> - ユーザーに対し、どんな機能を実装すればよいかが分からない
-> - PMFを達成するプロダクトに成長できない
-> 
-> もし、この課題を解決できる製品があれば、**〇〇さんのプロダクトを大きく成長できるきっかけをつくれる**と確信しています！
-> ぜひ30分ほどお話させていただき、次のことをお聞きしたいです。
-> 
-> - ユーザーとのフィードバックループを構築していますか？**ユーザーの意見をどのようにプロダクトに反映しているか**をお聞きしたい。
-> - 現状のフィードバックループの仕組みに**不満**を感じませんか？**仕組みを変えよう**としたことはありますか？
-> - ユーザーの声や意見が、あなたの会社やチームに **どれほど影響を与えていますか？** それぞれ、大中小でお答えください。
->   - 会社の全体目標、経営戦略や経営計画 → CEOやCTOの経営層レベル
->   - プロダクトの方針やロードマップ、開発計画 → TLMやTL, Managerのリーダーレベル
->   - UIやUX、デザイン、詳細の実装方針 → エンジニアやデザイナーなどのチームメンバーレベル
-
-上記のストーリーに沿って対話を進め、課題検証のゴールである次についてをユーザーから聞き出す。
-
-- **"課題が原因で発生する問題の具体的なエピソード"** と **"そのときの感情の痛み"**'
-- その課題に対して **"すでに行動している"** か、あるいは **"行動したがうまくいっていない"** 証拠があること
-- 課題が **"意思決定や行動"** にどれほど影響しているかがわかる
-
-これにより、**「開発チームとユーザーとの繋がりが薄い」** という課題が、次の内容であるかを確認することができる。
-
-- 市場に**明確に存在**し、ユーザーにとって**大きな痛みを伴う**ものであるかが分かる
-- 既存の解決手段では課題の解決が**難しい**、または**満足できない**ものであるかが分かる
-- 課題が、経営層レベル、リーダーレベル、チームメンバーレベルに、**どれほど影響を与えているか**が分かる
-
-上記3つの確認ができることで、はじめて取り組むべき課題かどうかを判断することができる。
+*"Because we don't really understand what our users want, we can't decide which feature to build next. We just end up going with whatever our boss decides."*
 
 {{</ collapse >}}
 
 ---
 
-## 検証結果
+## Problem Validation Process
 
-結果は6.5点だった。感情的痛みが1.5、行動実績が3、意思決定への影響が2である。
+To validate our problem hypothesis, we planned the following steps to engage in meaningful conversations with as many target users as possible:
 
-この課題は重要視されていない、**開発チームにとって痛みを伴う自覚のないもの**と分析した。対話と自身の経験から、開発チームとプロダクトに大きな影響を与えているものだと確信した。この課題は"困っているが、困っていない"と答える課題である。
+1. Establish contact with users who fit our persona and resonate with the problem.
+2. Conduct interviews to confirm the three key criteria for problem validation.
 
-この課題でProblem-Solution Fitのフェーズに進むと決めた。
-"課題に気づく"モックを作成し、課題を再検証を行う。そこで、この課題が本当にユーザーにとって課題でないかを確認し、取り組むかどうかを決定する。
+Our initial goal was to speak with 30 target users.
+For user outreach, we adopted a content-driven approach, aiming to attract users through posts that share relatable stories about the problem.
 
-> {{< collapse summary="検証過程" >}}
+> {{< collapse summary="Detailed Strategy" >}}
 
-### 1. ペルソナに該当する、課題に共感するユーザーと接点を獲得する
+### 1. Establishing Contact with Target Users
 
-課題について共感できる内容を書いた記事を[Zenn](https://zenn.dev/sakanate/articles/9a87f93f79df05)と[note](https://note.com/sakanate/n/n8b4c1323036c)に投稿し、投稿型検証を行った。
-結果は次のとおり、惨敗だった。
-
-- 全く読まれない。ペルソナユーザーが読む機会がない。
-- 一日あたり2いいね、コメント0だった
-
-投稿内容がそこまでひどいとは考えておらず、ChatGPTや友人に率直なレビューを依頼していたこともあり、それなりのクオリティはおそらくある。
-Zennは他の人の投稿頻度がかなり多く、投稿から2時間ほどで完全に埋もれてしまい、記事を見つけることがほぼ不可能になってしまった。
-
-また、コメントについても強くお願いし、具体的にどうコメントしてほしいかまで依頼したが、残念ながらコメント0だった。Zennではコメントをする文化がなく、他の記事もほぼコメント0である。「見て終わり」のプラットフォームであり、課題仮説の検証に不向きだと思われる。
-
-次のアクションとして、Mediumに英語翻訳版の投稿やIndie HackersやProductHuntのForum、Redditでのスレッド投稿を考えた。次の事項を懸念し、課題の重要性に気づくことができるMVPをつくり、それを見せながら課題仮説を検証するアプローチを採用することにした。
-
-- 英語ユーザーが多く、最終的な深いインタビューで言語の壁ができてしまう。深く聞けるかの自信がなかった。
-- スレッドでの会話で、相手の連絡先をもらい、インタビューを依頼するまで導くことがかなり難しく、戦略を立てられなかった
-- ProducHuntや#Buildinpublic, Indie Hackers, Zenn, 友人・知人でプロダクト開発事例をみると、Build Firstでプロダクトを作っている方が多く、課題の重要性を軽視しているように感じた
+To reach potential target users, we chose to publish highly relatable stories on platforms like Medium. These posts aim to resonate deeply with our target personas and encourage them to reach out via the contact information or comments provided in the posts. We drew inspiration from content like [Rahul Vohra's post on Superhuman](https://medium.com/swlh/rip-mailbox-or-founders-how-to-stop-worrying-and-love-being-acquired-261da4f6d566) to craft our messaging.
 
 ---
 
-### 2. ユーザーと対話を行い、課題検証ゴールの確認を行う
+### 2. Conducting Interviews and Confirming the 3 Key Criteria
 
-前のとおり、多くの方への確認はできなかったが、友人・知人のペルソナに近い人物3名から話を聞くことができた。
-次に大まかな対話内容を示す。詳細までは記載しない。
+First, verify that the person you are speaking with fits the target persona:
 
-> 課題が原因で発生する問題の具体的なエピソードとそのときの感情の痛み
+> - Can you tell me about the product you are currently developing?
+> - What stage is your product in? Has it been officially released?
+> - What is your role within the development team, and what type of company do you work for?
 
-- Aさんは、課題感をあまり感じていなかった
-- Bさんは、具体的エピソードと強い感情の痛みがあった
-- Cさんは、課題感を感じていなかった
+If the person fits the target persona, proceed to schedule an interview. Clearly explain the background, purpose, and key questions you plan to cover:
 
-気になる点や分かったこと
+> I believe that many development teams today face the "challenge of weak connections with their users."
+> This distance between developers and users can lead to the following issues:
+>
+> - Teams struggle to decide which features to build for their users.
+> - Products fail to grow into PMF-achieving solutions.
+>
+> I am confident that a product capable of solving this problem could be a significant growth opportunity for your product as well!
+> I would love to spend about 30 minutes discussing this topic with you. Here are some of the key things I would like to understand:
+>
+> - Are you currently building a feedback loop with your users? How do you incorporate user feedback into your product?
+> - Are you dissatisfied with your current feedback loop? Have you ever tried to change it?
+> - How much impact do user voices and feedback have on your company and team? Please answer with High, Medium, or Low for the following levels:
+>     - Company-Level: Overall goals, business strategy, or management decisions (CEO, CTO level)
+>     - Product-Level: Product direction, roadmap, or development plans (Tech-Lead Manager, Tech-Lead, or Manager level)
+>     - Team-Level: UI/UX, design choices, or detailed implementation decisions (engineers or designers)
 
-- PMF前のプロダクトを開発しているチームは比較的課題に共感でき、PMF後のプロダクトを開発しているチームは課題にあまり共感しない
-- 3名とも課題に対し、直接強い課題感を感じる人はいない。困っているといえば困っているが、うーんという感じ。
-- 2名はBuild Firstの哲学で、1名はLean Startupの哲学で動いている
-- 3名とも、その機能をユーザーが望んでいることに確信や自信はあるか？と聞くと、**それが分からないからリリースして確かめる**と回答した
+Follow this script to guide the conversation and aim to uncover the following critical insights:
 
-> その課題に対して既に行動しているか、あるいは行動したがうまくいっていない証拠があること
+- "Specific episodes" of problems caused by the lack of user connection, along with the "emotional pain" these incidents caused.
+- Evidence that the user has "already taken action" to address the problem, or has "tried and failed" to resolve it.
+- Clear understanding of how this problem "impacts decision-making and actions" within the organization.
 
-- 3名とも行動している。3名とも、現状うまくいっていると回答した。
+Achieving these goals will confirm whether the "weak connections between development teams and their users" problem meets the following criteria:
 
-気になる点
+- It clearly exists in the market and represents a significant pain point for users.
+- It is a problem that cannot be easily solved or satisfactorily addressed by existing solutions.
+- It significantly impacts multiple levels within an organization, from executives to frontline team members.
 
-- うまくいっていると回答するが、「分からないからリリースして確かめる」とも言う
+Only when all three of these points are confirmed can we consider this a validated problem worth pursuing.
 
-> 課題が、意思決定や行動にどれほど影響しているかがわかる
+{{</ collapse >}}
 
-3名とも、チームリーダーレベルとエンジニアレベルだった。
-経営層レベルも少なからず影響はしている模様。
+---
+
+## Validation Results
+
+The final score was 6.5 out of 9 points:
+
+- Emotional Pain: 1.5
+- Evidence of Action: 3
+- Impact on Decision-Making: 2
+
+From this, we concluded that the problem is not strongly felt by most development teams, making it a **"pain without awareness" type of problem.** Despite this, based on our conversations and personal experiences, we remain convinced that this problem has a significant impact on both development teams and their products. In essence, this is a "problem that is troubling, but not obviously troubling."
+
+With this assessment, we decided to move to the Problem-Solution Fit phase for this problem. We plan to build a "Problem Awareness" mock-up to further validate whether this is a genuine pain point for users. Through this, we aim to confirm whether this problem is truly significant or simply an unnoticed obstacle before committing further resources.
+
+> {{< collapse summary="Validation Process" >}}
+
+### 1. Establishing Contact with Problem-Aware Users
+
+We attempted a post-driven validation approach by publishing articles that share our problem hypothesis on [Zenn](https://zenn.dev/sakanate/articles/9a87f93f79df05) and [note](https://note.com/sakanate/n/n8b4c1323036c).
+The results were disappointing:
+
+- The articles received very few views, as our target persona likely never had the chance to see them.
+- The engagement was minimal, with just 2 likes per day and 0 comments over several days.
+
+We didn't consider the quality of our posts to be particularly poor, as we had sought direct feedback from ChatGPT and friends before publishing. However, Zenn has a high posting volume, causing new articles to quickly become buried within 2 hours of being published, making them nearly impossible to find.
+
+Despite making a strong push for comments – even providing clear guidance on what kind of comments we hoped to receive – the posts still received 0 comments. This reinforced our suspicion that Zenn lacks a strong commenting culture, making it more of a "read-only" platform, and thus unsuitable for validating deep, nuanced problem hypotheses.
+
+Given these challenges, we decided to pivot our approach to include:
+
+- Publishing English versions on Medium
+- Exploring threads on Indie Hackers, ProductHunt, and Reddit
+
+However, we identified several concerns with this approach, leading us to prioritize building an MVP for Problem Awareness as a more direct method of validation:
+
+- Many users on these platforms are English speakers, potentially creating a language barrier during deeper interviews.
+- It is difficult to obtain contact information or secure follow-up interviews through thread-based discussions.
+- Many founders in these communities tend to take a "Build First" approach, which we felt might downplay the importance of validating problem hypotheses.
+
+---
+
+### 2. Conducting User Conversations to Confirm Problem Validation Goals
+
+Although we struggled to reach a large number of potential users, we did manage to have initial conversations with 3 individuals from our network who closely fit our target persona. Below is a brief summary of our findings:
+
+> **Specific Episodes of Problems and Emotional Pain**
+
+- Person A did not express a strong sense of pain related to the problem.
+- Person B shared a specific episode along with strong emotional pain.
+- Person C also did not express a strong sense of pain related to the problem.
+
+**Key Insights:**
+
+- Teams building products before achieving PMF were more likely to resonate with the problem, while those after PMF felt less connected to the issue.
+- None of the 3 individuals expressed a clearly strong awareness of the problem. They acknowledged it as a challenge, but with a "maybe, but not really" attitude.
+- 2 of the individuals followed a "Build First" approach, while 1 followed a "Lean Startup" approach.
+- When asked if they had certainty or confidence that their users truly wanted the features they were building, all 3 responded that they "release it to find out."
+
+> **Evidence of Previous Attempts to Solve the Problem**
+
+- All 3 individuals indicated that they were already taking action to address the problem and felt that their current approach was "working well."
+
+**Key Concern:**
+
+- Despite claiming that their approaches were working, they still admitted, "We don't know for sure, so we just release it to find out."
+
+> **Impact on Decision-Making and Actions**
+
+- All 3 individuals indicated that the problem primarily impacts decision-making at the team leader and engineer levels.
+- However, they also suggested that it has at least some influence at the executive level as well.
 
 {{</ collapse >}}
 
