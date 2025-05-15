@@ -5,7 +5,9 @@ defaultContentLanguage: en
 title: Handbook
 theme: [PaperMod]
 enableEmoji: true
-pagination.paperSize: 5
+
+pagination:
+  paparSize: 5
 
 languages:
   en:
